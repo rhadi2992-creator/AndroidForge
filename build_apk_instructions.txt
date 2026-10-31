@@ -1,0 +1,32 @@
+=========================================================
+STREET CHASE: REAL ESCAPE — ANDROID & WEB BUILD GUIDE
+=========================================================
+
+1. WEB BUILD:
+   npm install
+   npm run build
+
+2. COPY WEB ASSETS TO ANDROID:
+   mkdir -p android/app/src/main/assets
+   cp -r dist/* android/app/src/main/assets/
+
+3. ANDROID STUDIO:
+   - Open Android Studio
+   - Select "Open an Existing Project" and choose the "android" folder
+   - Wait for Gradle sync to complete
+
+4. BUILD APK (TERMINAL):
+   cd android
+   ./gradlew assembleDebug
+
+   Your Debug APK will be generated at:
+   android/app/build/outputs/apk/debug/app-debug.apk
+
+5. PRODUCTION ADMOB CONFIGURATION:
+   - App ID: ca-app-pub-3133971041724338~1435685725
+   - Banner: ca-app-pub-3133971041724338/5796556380
+   - Interstitial: ca-app-pub-3133971041724338/5419609870
+   - Rewarded: ca-app-pub-3133971041724338/3170393048
+   - App Open: ca-app-pub-3133971041724338/5183359047
+   - Native: ca-app-pub-3133971041724338/9167283199
+   - ads.txt: google.com, pub-3133971041724338, DIRECT, f08c47fec0942fa0
